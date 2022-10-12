@@ -1,0 +1,13 @@
+button.language {
+  font-size: 24px;
+  background-color: lightgray;
+
+  /* your code here 👇 */
+}
+
+button {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
