@@ -8,10 +8,6 @@ th {
   color: white;
 }
 
-tbody:nth-child(even) {
-  background-color: white;
-}
-
 tr:nth-child(odd) {
   background-color: lightgrey;
 }
