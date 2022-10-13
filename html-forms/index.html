@@ -7,38 +7,47 @@
 <body>
   <h1>Coding Form!</h1>
   <form>
-
-    <div>Email<input type="text"></div>
-
-
-
-    <div>Why is coding cool?</div>
-    <select name="Select an option">
-
-      <option value="Because it's interesting" selected="selected"> Because it's interesting</option>
-      <option value="Because it's fun" selected="selected">Because it's fun</option>
-      <option value="Because it's powerful" selected="selected">Because it's powerful</option>
-      <option value="Select an option" selected="selected">Select an option</option>
-    </select>
+    <div>
+      <label>
+        Email<input type="text" name="email"/>
+      </label>
+    </div>
+    <div>
+      Why is coding cool?
+    </div>
+    <label>
+      <select name="Select an option">
+        <option value="Because it's interesting" selected="selected"> Because it's interesting</option>
+        <option value="Because it's fun" selected="selected">Because it's fun</option>
+        <option value="Because it's powerful" selected="selected">Because it's powerful</option>
+        <option value="Select an option" selected="selected">Select an option</option>
+      </select>
+    </label>
 
 
     <p>Favorite Language (choose one)</p>
-    <input type="radio" name="languages" value="HTML"/>HTML
-    <input type="radio" name="languages" value="CSS"/>CSS
-    <input type="radio" name="languages" value="JavaScript"/>Javascript
-
-
+    <label>
+      <input type="radio" name="languages" value="HTML"/>HTML
+      <input type="radio" name="languages" value="CSS"/>CSS
+      <input type="radio" name="languages" value="JavaScript"/>Javascript
+    </label>
     <p>
 
-      Would you like like to sign up for more information?</p>
-    <input type="checkbox" name="Sign up" value="Sign me up!"/>Sign me up!
 
+      Would you like like to sign up for more information?</p>
+    <label>
+      <input type="checkbox" name="Sign up" value="Sign me up!"/>Sign me up!
+    </label>
 
 
     <div>Comments</div>
-    <textarea name="comments" cols="20" rows="4"></textarea>
+    <label>
+      <textarea name="comments" cols="20" rows="4"></textarea>
+    </label>
     <div>
-      <input type="submit" value="Submit"/>
+      <label>
+        <input type="submit" value="Submit"/>
+      </label>
     </div>
   </form>
 </body>
