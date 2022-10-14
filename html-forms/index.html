@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>HTML Forms</title>
 </head>
 <body>
   <h1>Coding Form!</h1>
-  <form>
-    <div>
-      <label>
-        Email<input type="text" name="email"/>
-      </label>
+  <form action="" id="form">
+    <div class="email">
+      <label for="email">Email</label>
     </div>
+    <input id="email" type="email">
     <div>
-      Why is coding cool?
+      <label for="coding">Why is coding cool?</label>
     </div>
-    <label>
-      <select name="Select an option">
-        <option value="Because it's interesting" selected="selected"> Because it's interesting</option>
-        <option value="Because it's fun" selected="selected">Because it's fun</option>
-        <option value="Because it's powerful" selected="selected">Because it's powerful</option>
-        <option value="Select an option" selected="selected">Select an option</option>
-      </select>
-    </label>
-
-
+    <select name="Select an option">
+      <option value="Because it's interesting" selected="selected"> Because it's interesting</option>
+      <option value="Because it's fun" selected="selected">Because it's fun</option>
+      <option value="Because it's powerful" selected="selected">Because it's powerful</option>
+      <option value="Select an option" selected="selected">Select an option</option>
+    </select>
     <p>Favorite Language (choose one)</p>
-    <label>
-      <input type="radio" name="languages" value="HTML"/>HTML
-      <input type="radio" name="languages" value="CSS"/>CSS
-      <input type="radio" name="languages" value="JavaScript"/>Javascript
+    <label for="HTML">
+      <input type="radio" name="languages" value="HTML">HTML
     </label>
-    <p>
-
-
-      Would you like like to sign up for more information?</p>
-    <label>
-      <input type="checkbox" name="Sign up" value="Sign me up!"/>Sign me up!
+    <label for="CSS">
+      <input type="radio" name="languages" value="CSS">CSS
+    </label>
+    <label for="JavaScript">
+      <input type="radio" name="languages" value="JavaScript">Javascript
     </label>
 
-
-    <div>Comments</div>
-    <label>
-      <textarea name="comments" cols="20" rows="4"></textarea>
-    </label>
-    <div>
-      <label>
-        <input type="submit" value="Submit"/>
-      </label>
+    <div class="signup">
+      <p>
+        Would you like like to sign up for more information?
+      </p>
+      <input type="checkbox" name="Sign up" value="Sign me up!">
+      <label for="signup">Sign me up!</label>
     </div>
+    <label for="comments">Comments</label>
+    <div>
+      <textarea name="comments" cols="20" id="comments" rows="6"></textarea>
+      <div>
+        <input type="submit" value="Submit"/>
+      </div>
   </form>
 </body>
 </html>
