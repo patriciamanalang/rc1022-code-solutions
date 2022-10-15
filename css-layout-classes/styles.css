@@ -12,7 +12,7 @@
 }
 
 .column-one-third {
-  flex-basis: calc(100/3);
+  flex-basis: calc(100%/3);
 }
 
 .column-one-fourth {
