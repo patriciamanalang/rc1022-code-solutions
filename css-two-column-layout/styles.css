@@ -1,0 +1,54 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-three-fourth {
+  flex-basis: 75%;
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.position-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.button {
+  background-color: white;
+  padding: 8px 20px;
+  font-size: 0.75rem;
+  border: 1px solid red;
+  color: red;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.font-family {
+  font-family: Karla, sans-serif;
+}
+
+img {
+  width: 90%;
+}
