@@ -3,9 +3,7 @@
   height: 300px;
   background-image: url("images/one-does-not-simply.jpg");
   background-size: cover;
-  position: absolute
-
-  /* your code here */
+  position: relative;
 }
 
 .meme > img {
@@ -35,9 +33,4 @@
   background: linear-gradient(transparent, rgb(0 0 0 / 75%));
   position: absolute;
   bottom: 3px;
-}
-
-.about {
-  position: absolute;
-  top: 300px;
 }
