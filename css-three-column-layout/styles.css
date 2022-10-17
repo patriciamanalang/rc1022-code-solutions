@@ -52,7 +52,7 @@
 }
 
 .column-third {
-  flex-basis: 100%/3;
+  flex-basis: calc(100%/3);
   padding: 14px;
 }
 
