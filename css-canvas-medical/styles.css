@@ -50,45 +50,52 @@
   width: 800px;
 }
 
-.column-three-fourth {
-  flex-basis: 75%;
-}
-
 .hero-para {
   font-family: Avenir, sans-serif;
   line-height: 19px;
   font-size: 10px;
   letter-spacing: 0.07px;
-  margin-right: 270px;
   color: white;
+  max-width: 330px;
+  position: relative;
+  bottom: 350px;
+  margin-left: 50px;
 }
 
 .hero-title {
   line-height: 35px;
   color: white;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 25px;
   letter-spacing: 0.01px;
   position: relative;
-  top: 10px;
+  bottom: 350px;
+  margin-left: 50px;
 }
 
 .hero-position {
-  position: relative;
-  bottom: 370px;
-  left: 50px;
+  position: absolute;
+  top: 150px;
+  bottom: 150px;
+  left: 90px;
+  right: 100px;
 }
 
 .get-started-button {
   background-color: rgb(41 67 99);
   color: white;
-  height: 40px;
-  width: 120px;
-  border-radius: 5px;
+  height: 36px;
+  width: 130px;
+  border-radius: 3px;
   font-family: Avenir, sans-serif;
   border: none;
   position: relative;
-  top: 20px;
+  bottom: 350px;
+  margin-left: 50px;
+}
+
+.column-three-fourth {
+  height: 9px;
 }
 
 .clinicians-title {
@@ -96,6 +103,7 @@
   text-align: center;
   font-family: "Tiempos Headline", sans-serif;
   color: rgb(110 110 110);
+  margin-top: 50px;
 }
 
 .col-full-background {
@@ -170,9 +178,50 @@
   color: rgb(251 251 251);
   text-align: left;
   font-family: Avenir, sans-serif;
+  padding: 20px 60px;
 }
 
 .canvas-font {
   font-family: "Tiempos Headline", sans-serif;
-  font-weight: 12px;
+  font-style: normal;
+  font-weight: normal;
+  src: url("TiemposHeadline-Regular.woff2") format("woff2");
+  font-weight: 50;
+  font-size: 30px;
+  letter-spacing: 1.2px;
+}
+
+.address-line-height {
+  line-height: 11px;
+  font-size: 11px;
+}
+
+.company-product-text {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("Avenir.woff2") format("woff2");
+  font-size: 12px;
+  padding: 20px 40px;
+}
+
+.privacy-p {
+  display: inline;
+}
+
+.privacy {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("Avenir.woff2") format("woff2");
+  font-size: 10.5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(250 250 250);
+  padding-left: 60px;
+  color: rgb(110 110 110);
+}
+
+.contact-us-bottom {
+  padding-left: 40px;
 }
