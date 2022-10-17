@@ -34,4 +34,4 @@ var pet = {
 
 delete pet.name;
 delete pet.type;
-console.log(pet);
+console.log('value of pet:', pet);
