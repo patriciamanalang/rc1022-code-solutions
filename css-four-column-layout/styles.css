@@ -1,0 +1,52 @@
+.container {
+  margin: auto;
+  max-width: 80%;
+  background-color: rgb(247 248 250);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 13px;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
+
+.page-title {
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+* {
+  font-family: Barlow, sans-serif;
+}
+
+.image-screen {
+  width: 100%;
+}
+
+.image-icon {
+  width: 20%;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+.p-txt-align {
+  text-align: center;
+}
+
+.p-font {
+  font-size: 12px;
+  font-weight: 900;
+  color: rgb(30 30 31);
+}
+
+.p-info-font {
+  font-size: 8px;
+  margin-top: 20px;
+}
