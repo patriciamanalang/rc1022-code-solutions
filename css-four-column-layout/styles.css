@@ -9,10 +9,6 @@
 
 .column-one-fourth {
   flex-basis: 25%;
-  background-color: rgb(247 248 250);
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 13px;
 }
 
 .page-title {
@@ -50,4 +46,15 @@
 .p-info-font {
   font-size: 8px;
   margin-top: 20px;
+}
+
+.background-padding {
+  background-color: rgb(247 248 250);
+  padding-bottom: 13px;
+}
+
+.padding-left-right {
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: rgb(247 248 250);
 }
