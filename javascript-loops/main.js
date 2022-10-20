@@ -28,7 +28,7 @@ function getEvenNumbersToTwenty() {
   return evenNumbers;
 }
 
-function repeatWord(word, times) { // ask about this function during Q & A //
+function repeatWord(word, times) {
   var count = 1;
   var repeated = '';
 
