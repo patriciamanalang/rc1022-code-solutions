@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  max-width: 880px;
+  max-width: fit-content;
 }
 
 .row {
@@ -31,13 +31,13 @@
 .price-background-color {
   background-color: rgb(255 241 231);
   display: inline;
-  font-size: 12px;
+  font-size: 11px;
   margin-right: 6px;
 }
 
 .size-and-retail-price-color {
   color: rgb(215 215 215);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .brand-name {
@@ -45,5 +45,18 @@
 }
 
 .brand-name-and-size {
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0.01px;
+}
+
+.image-margin {
+  margin: 13px;
+}
+
+.object-fit {
+  object-fit: contain;
+}
+
+.p-margin {
+  margin: 1.5px;
 }
