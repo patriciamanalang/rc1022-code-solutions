@@ -33,7 +33,7 @@ function repeatWord(word, times) { // ask about this function during Q & A //
   var repeated = '';
 
   while (count < times) {
-    repeated = '' + count;
+    repeated += word;
     count++;
   }
   return repeated;
