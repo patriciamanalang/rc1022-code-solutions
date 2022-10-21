@@ -1,0 +1,62 @@
+.container {
+  margin: auto;
+  max-width: fit-content;
+}
+
+.row {
+  display: flex;
+  margin: auto;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-fifth {
+  flex-basis: calc(100% / 5);
+  font-family: "DM Sans", sans-serif;
+}
+
+.image-size {
+  height: 300px;
+  width: 200px;
+}
+
+.page-title {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+}
+
+.price-background-color {
+  background-color: rgb(255 241 231);
+  display: inline;
+  font-size: 11px;
+  margin-right: 6px;
+}
+
+.size-and-retail-price-color {
+  color: rgb(215 215 215);
+  font-size: 12px;
+}
+
+.brand-name {
+  border-right: 1px;
+}
+
+.brand-name-and-size {
+  font-size: 12px;
+  letter-spacing: 0.01px;
+}
+
+.image-margin {
+  margin: 13px;
+}
+
+.object-fit {
+  object-fit: contain;
+}
+
+.p-margin {
+  margin: 1.5px;
+}
