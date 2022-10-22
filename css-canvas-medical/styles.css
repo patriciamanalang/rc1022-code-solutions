@@ -14,6 +14,9 @@
 
 .column-one-fifth {
   flex-basis: calc(100%/5);
+}
+
+.font-padding-color {
   font-family: Avenir, sans-serif;
   font-size: 13px;
   padding-top: 22px;
@@ -31,7 +34,9 @@
   color: rgb(250 251 251);
   border-radius: 5px;
   position: relative;
-  bottom: 10px;
+  top: 7px;
+  font-size: 13px;
+  font-family: Avenir, sans-serif;
 }
 
 .contact-us-padding {
@@ -95,6 +100,10 @@
 }
 
 .column-three-fourth {
+  flex-basis: 75%;
+}
+
+.height {
   height: 9px;
 }
 
@@ -103,7 +112,7 @@
   text-align: center;
   font-family: "Tiempos Headline", sans-serif;
   color: rgb(110 110 110);
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .col-full-background {
@@ -182,10 +191,7 @@
 }
 
 .canvas-font {
-  font-family: "Tiempos Headline", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  src: url("TiemposHeadline-Regular.woff2") format("woff2");
+  font-family: Avenir, sans-serif;
   font-weight: 50;
   font-size: 30px;
   letter-spacing: 1.2px;
@@ -200,9 +206,6 @@
 
 .company-product-text {
   font-family: Avenir, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  src: url("Avenir.woff2") format("woff2");
   font-size: 12px;
   padding: 20px 40px;
 }
