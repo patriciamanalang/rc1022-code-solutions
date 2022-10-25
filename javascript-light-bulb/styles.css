@@ -1,0 +1,46 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-third {
+  flex-basis: calc(100%/3);
+}
+
+.center {
+  min-height: 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bulb {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 75px;
+}
+
+.off {
+  background-color: rgb(34 34 35);
+}
+
+.light-off {
+  background-color: rgb(17 17 17);
+}
+
+.on {
+  background-color: rgb(250 234 132);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px rgb(252 238 165);
+}
+
+.light-on {
+  background-color: rgb(254 249 241);
+}
