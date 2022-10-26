@@ -9,14 +9,17 @@
 
 </head>
 <body>
-  <div class="dark-mode">
-    <button class="blue-btn dark-mode-button">Open Modal</button>
-  </div>
-  <div class="hidden dark-mode modal text-align">
-    <div class="modal">
-      <h2>Would you like to take a survey?</h2>
-      <button class="no-btn">NO</button>
+  <div class="container">
+    <div>
+      <button class="open-modal-btn">Open Modal</button>
     </div>
-    <script src="main.js"></script>
+    <div class="hidden overlay fixed modal text-align">
+      <div class="modal">
+        <h2>Would you like to take a survey?</h2>
+        <button class="no-btn">NO</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>

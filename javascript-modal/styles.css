@@ -1,17 +1,9 @@
 .container {
-  max-width: 100%;
+  max-width: 90%;
   margin: auto;
 }
 
-.row {
-  display: flex;
-}
-
-.column-full {
-  flex-basis: 100%;
-}
-
-.blue-btn {
+.open-modal-btn {
   background-color: rgb(74 74 232);
   color: rgb(238 238 252);
   position: relative;
@@ -20,6 +12,8 @@
   font-size: 20px;
   border: none;
   box-shadow: 1px 1px 1px 1px rgb(172 173 173);
+  margin-top: 10px;
+  margin-left: 7px;
 }
 
 .no-btn {
@@ -31,6 +25,7 @@
   box-shadow: 1px 1px 1px 1px rgb(153 153 153);
   font-size: 18px;
   margin-top: 15px;
+  margin-left: 100px;
 }
 
 .modal {
@@ -39,10 +34,11 @@
   left: 300px;
   padding: 30px 20px;
   border-radius: 5px;
+  margin-top: 180px;
 }
 
 .hidden {
-  /* display: none; */
+  display: none;
 }
 
 .text-align {
@@ -56,12 +52,14 @@ h2 {
   font-weight: bolder;
 }
 
-.dark-mode {
-  background-color: rgb(50 50 50);
+.overlay {
+  background: rgba(0 0 0 / 75%);
+}
+
+.fixed {
   position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   left: 0;
-  max-width: 100%;
 }
