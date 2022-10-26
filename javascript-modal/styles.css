@@ -1,0 +1,67 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.blue-btn {
+  background-color: rgb(74 74 232);
+  color: rgb(238 238 252);
+  position: relative;
+  padding: 6px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgb(172 173 173);
+}
+
+.no-btn {
+  background-color: rgb(235 93 93);
+  color: rgb(254 254 254);
+  border-radius: 5px;
+  border: none;
+  padding: 6px 20px;
+  box-shadow: 1px 1px 1px 1px rgb(153 153 153);
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.modal {
+  background-color: rgb(254 254 254);
+  position: fixed;
+  left: 300px;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+.hidden {
+  /* display: none; */
+}
+
+.text-align {
+  text-align: center;
+  margin-top: 120px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.dark-mode {
+  background-color: rgb(50 50 50);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+}
