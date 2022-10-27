@@ -5,7 +5,7 @@ $taskList.addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
     var closestLI = event.target.closest('.task-list-item');
     console.log('closest .task-list-item:', closestLI);
-  } else {
     closestLI.remove();
   }
+
 });
