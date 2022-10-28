@@ -1,0 +1,65 @@
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.open-modal-btn {
+  background-color: rgb(74 74 232);
+  color: rgb(238 238 252);
+  position: relative;
+  padding: 6px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgb(172 173 173);
+  margin-top: 10px;
+  margin-left: 7px;
+}
+
+.no-btn {
+  background-color: rgb(235 93 93);
+  color: rgb(254 254 254);
+  border-radius: 5px;
+  border: none;
+  padding: 6px 20px;
+  box-shadow: 1px 1px 1px 1px rgb(153 153 153);
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 100px;
+}
+
+.modal {
+  background-color: rgb(254 254 254);
+  position: fixed;
+  left: 300px;
+  padding: 30px 20px;
+  border-radius: 5px;
+  margin-top: 180px;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-align {
+  text-align: center;
+  margin-top: 120px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.overlay {
+  background: rgba(0 0 0 / 75%);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
