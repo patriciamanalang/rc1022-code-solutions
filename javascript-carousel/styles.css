@@ -1,0 +1,49 @@
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-fifth {
+  width: 20%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-three-fifths {
+  width: 60%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 15px;
+  width: 15px;
+}
+
+.left {
+  transform: rotate(135deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+}
+
+.dots {
+  display: flex;
+  gap: 0.8rem;
+  min-height: 12vh;
+  justify-content: center;
+}
