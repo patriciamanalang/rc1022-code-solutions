@@ -25,11 +25,8 @@ Account.prototype.withdraw = function (amount) {
 Account.prototype.getBalance = function () {
   var depositSum = 0;
   var withdrawalSum = 0;
+  var balance = 0;
 
-  if (this.transactions.length === 0) {
-    var balance = 0;
-    return balance;
-  }
   for (var i = 0; i < this.transactions.length; i++) {
     if (this.transactions[i].type === 'deposit') {
       depositSum += this.transactions[i].amount;
