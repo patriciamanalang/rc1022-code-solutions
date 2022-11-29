@@ -1,0 +1,256 @@
+    1  git status
+    2  git switch main
+    3  git pull origin main
+    4  git branch javascript-timers
+    5  git branch --list
+    6  git switch javascript-timers
+    7  git status
+    8  git add javascript-timers
+    9  git status
+   10  git commit -m "Completed javascript-timers exercise."
+   11  git push origin javascript-timers
+   12  git switch main
+   13  git switch main
+   14  git pull origin main
+   15  git branch javascript-carousel
+   16  git branch --list
+   17  git switch javascript-carousel
+   18  git status
+   19  git add javascript-carousel
+   20  git status
+   21  git commit -m "completed javascript-carousel challenge."
+   22  git push origin javascript-carousel
+   23  git status
+   24  git switch main
+   25  git switch array-manipulation-2
+   26  git status
+   27  git switch javascript-bank
+   28  git switch main
+   29  git switch javascript-bank
+   30  git add javascript-bank
+   31  git status
+   32  git commit -m "Removed unnecessary conditionals."
+   33  git push origin javascript-bank
+   34  git status
+   35  git switch main
+   36  git switch javascript-carousel
+   37  git status
+   38  git switch main
+   39  git switch string-manipulation-1
+   40  git status
+   41  git switch main
+   42  git switch array-manipulation-1
+   43  git status
+   44  git switch main
+   45  git status
+   46  git switch array-manipulation-2
+   47  git status
+   48  git switch main
+   49  git switch main
+   50  git pull origin main
+   51  git branch timed-coding-challenge
+   52  git git switch timed-coding-challenge
+   53  git switch timed-coding-challenge
+   54  git status
+   55  git add timed-coding-challenge
+   56  git status
+   57  git add main.js
+   58  git status
+   59  git commit -m "completed timed coding challenge."
+   60  git status
+   61  git switch main
+   62  git switch main
+   63  git pull origin main
+   64  git branch --list
+   65  git switch http-messages
+   66  git switch main
+   67  git pull origin main
+   68  git branch http-messages
+   69  git branch --list
+   70  git switch http-messages
+   71  http https://example.com
+   72  http --verbose https://example.com
+   73  http --verbose http://www.example.com
+   74  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   75  http --body GET https://example.com > http-messages/index.html
+   76  git status
+   77  git add http-messages
+   78  git status
+   79  git commit -m "completed http-messages exercise."
+   80  git status
+   81  git add main.js
+   82  git status
+   83  git commit -m "completed http-messages exercise."
+   84  git push origin http-messages
+   85  git switch main
+   86  git switch main
+   87  git pull origin main
+   88  git branch javascript-ajax
+   89  git branch --list
+   90  git switch javascript-ajax
+   91  git status
+   92  git add javascript-ajax
+   93  git status
+   94  git commit -m "completed javascript-ajax exercise."
+   95  git status
+   96  git push origin javascript-ajax
+   97  git status
+   98  git switch main
+   99  git status
+  100  git switch string-manipulation-2
+  101  git status
+  102  git switch main
+  103  git status
+  104  git switch array-manipulation-2
+  105  git status
+  106  git add array-manipulation-2
+  107  git status
+  108  git commit -m "IN PROGRESS."
+  109  git status
+  110  git switch main
+  111  git switch object-manipulation-2
+  112  git status
+  113  git add object-manipulation-2
+  114  git status
+  115  git commit -m "completed object-manipulation-2"
+  116  git push origin object-manipulation-2
+  117  git switch main
+  118  git status
+  119  git switch main
+  120  git switch main
+  121  git pull origin main
+  122  git branch api-test
+  123  git branch --list
+  124  git switch api-test
+  125  git status
+  126  git add api-test
+  127  git status
+  128  git status
+  129  git add api-test
+  130  git status
+  131  git commit -m "successfully retrieved api data for ajax project."
+  132  git switch main
+  133  git status
+  134  git switch main
+  135  git status
+  136  git switch array-manipulation-2
+  137  git status
+  138  git add array-manipulation-2
+  139  git status
+  140  git commit -m "Completed array-manipulation-2."
+  141  git push origin array-manipulation-2
+  142  git status
+  143  git switch main
+  144  git switch main
+  145  git switch main
+  146  git pull origin main
+  147  git branch es6-const-let
+  148  git switch es6-const-let
+  149  git status
+  150  git add es6-const-let/
+  151  git status
+  152  git commit -m "Completed es6-const-let/ exercise."
+  153  git push origin es6-const-let
+  154  git status
+  155  git switch main
+  156  git status
+  157  git switch main
+  158  git pull origin main
+  159  git branch es6-template-literals
+  160  git switch es6-template-literals
+  161  git status
+  162  git add es6-template-literals/
+  163  git status
+  164  git commit -m "completed es6-template-literals."
+  165  git push origin es6-template-literals
+  166  git status
+  167  git switch main
+  168  git switch main
+  169  git pull origin main
+  170  git branch es6-destructuring
+  171  git switch es6-destructuring
+  172  git status
+  173  git add es6-destructuring/
+  174  git status
+  175  git commit -m "completed es6-destructuring."
+  176  git push origin es6-destructuring
+  177  git switch main
+  178  git switch main
+  179  git pull origin main
+  180  git branch es6-arrow-functions
+  181  git switch es6-arrow-functions
+  182  git status
+  183  git add es6-arrow-functions/
+  184  git status
+  185  git commit -m "completed es6-arrow-functions."
+  186  git push origin es6-arrow-functions
+  187  git switch main
+  188  git pull origin main
+  189  git switch main
+  190  git pull origin main
+  191  git branch command-line-basics
+  192  git switch command-line-basics
+  193  cd command-line-basics
+  194  man man
+  195  man cat
+  196  cat laziness.txt
+  197  cat impatience.txt
+  198  cat hubris.txt
+  199  cat laziness.txt impatience.txt hubris.txt
+  200  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  201  cat three-virtues.txt
+  202  man ls
+  203  ls
+  204  ls -a
+  205  ls -F
+  206  ls lfz-staff/
+  207  ls -a lfz-staff/
+  208  ls -F lfz-staff/
+  209  ls -aF lfz-staff > lfz-staff/contents.txt
+  210  ls -aF lfz-staff
+  211  ls -aF lfz-staff > lfz-staff/contents.txt
+  212  ls lfz-staff/
+  213  ls lfz-staff/ > lfz-staff/contents.txt
+  214  ls -a lfz-staff/
+  215  ls -F lfz-staff/
+  216  ls -aF lfz-staff > lfz-staff/contents.txt
+  217  cat lfz-staff/contents.txt
+  218  man pwd
+  219  pwd
+  220  pwd > i-was-here.txt
+  221  ls
+  222  man echo
+  223  echo 'Hello, World!'
+  224  echo 'Hello, World!' > hello.txt
+  225  ls
+  226  man touch
+  227  touch tag-youre-it.txt
+  228  touch snoot/boop.txt
+  229  ls
+  230  man mkdir
+  231  mkdir parent
+  232  ls
+  233  -p mkdir
+  234  mkdir -p
+  235  man mkdir
+  236  mkdir -p parent/child/grandchild
+  237  touch .gitkeep parent/child/grandchild
+  238  touch .gitkeep
+  239  touch parent/child/grandchild/.gitkeep
+  240  touch parent/child/grandchild/.gitkeep
+  241  ls -a
+  242  man mv
+  243  man mv
+  244  mv pokiemans pokemon
+  245  ls
+  246  man rm
+  247  rm lol.txt
+  248  ls
+  249  rm -r kill-me/
+  250  ls
+  251  man cp
+  252  cp and-then.txt no-and-then.txt
+  253  ls
+  254  man history
+  255  history
+  256  history > command-history.txt
