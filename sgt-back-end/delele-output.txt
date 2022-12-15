@@ -1,0 +1,17 @@
+DELETE /api/grades/1 HTTP/1.1
+User-Agent: HTTPie/2.6.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 0
+Host: localhost:3000
+
+
+
+HTTP/1.1 204 No Content
+X-Powered-By: Express
+ETag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+Date: Thu, 15 Dec 2022 03:10:40 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
