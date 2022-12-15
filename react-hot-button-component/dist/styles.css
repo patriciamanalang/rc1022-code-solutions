@@ -1,0 +1,35 @@
+button {
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 2px black;
+  border: solid black 2px;
+}
+
+.button-three {
+  color: white;
+  background-color: rgb(53 28 117);
+}
+
+.button-six {
+  color: white;
+  background-color: rgb(103 78 167);
+}
+
+.button-nine {
+  color: white;
+  background-color: rgb(224 102 102);
+}
+
+.button-twelve {
+  color: black;
+  background-color: rgb(246 178 107);
+}
+
+.button-fifteen {
+  color: black;
+  background-color: rgb(253 255 2);
+}
+
+.button-eighteen {
+  color: black;
+  background-color: rgb(255 255 255);
+}
