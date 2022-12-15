@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.pill {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+.pill.on {
+  background-color: rgb(106 168 80);
+}
+
+.pill.off {
+  background-color: rgb(226 226 226);
+}
+
+.switch {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.switch.on {
+  left: 0;
+}
+
+.switch.off {
+  right: 0;
+}
+
+h1 {
+  margin-left: 1rem;
+}
