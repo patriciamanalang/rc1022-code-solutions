@@ -1,0 +1,21 @@
+PUT /api/grades/6 HTTP/1.1
+User-Agent: HTTPie/2.6.0
+Accept-Encoding: gzip, deflate
+Accept: application/json, */*;q=0.5
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 60
+Host: localhost:3000
+
+{"name": "Tim Davis", "course": "JavaScript", "score": "20"}
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 104
+ETag: W/"68-AD/qjcw83yMSSvBDpiRlGOSkI6M"
+Date: Thu, 15 Dec 2022 02:57:45 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"gradeId":6,"name":"Tim Davis","course":"JavaScript","score":20,"createdAt":"2022-12-14T04:26:09.373Z"}
