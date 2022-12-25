@@ -1,0 +1,28 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  border: 1px solid white;
+  width: 80%;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+p {
+  border: 1px solid white;
+  background-color: rgb(205 205 205);
+  color: black;
+  width: 80%;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  line-height: 1.7rem;
+}
