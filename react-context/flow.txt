@@ -1,0 +1,167 @@
+# Setup
+  * Back-end server code is set up on server/index.js
+    - Within index.js, two post routes are defined to respond to the client for when the user is Signing Up and Signing In
+      * Sign up
+        - If the client did NOT provide a valid user name and password, a ClientError is sent
+        - If the client did provide valid inputs, argon2 is used to hash the provided password
+        - then, sql code is used to insert the username and hashedPassword into the database
+        - userId, username, and createdAt is returned and sent back to the client
+      * Sign in
+        - If the client did NOT provide a valid user name and password, a ClientError is sent
+        - If the client did provide valid inputs, we query the database using sql code to return the userId and hashedPassword from that speciifc username
+        - argon2 is used to verify if the hashedPassword and the password provided by the user matches
+        - if they do match, a payload is created containing the userId and username
+        - jwt.sign() is used to sign a token using the TOKEN_SECRET specified in the env file
+        - An object containing the signed token and payload are returned to the client
+
+# Notes
+  * Front end is SERVED by the back-end
+  * When users go to a website, the browser sends a GET request for an HTML Document.
+  * HTML Document includes
+    - BootStrap link
+    - Font Awesome link
+    - Stylesheet link
+    - A script for a main.js file
+  * Main.js does not is exist but is handled by dev-middelware.js (which includes a bundle of all the client modules and creates a main.js for us)
+  * Once the browser recieves the JavaScript code (includes all the indiviual client modules), our front end code will start to get executed.
+
+# Front-End Code
+  * index.jsx
+    - React, ReactDOM, and the App Component are included in the bundle
+    - The root div is grabbed from the HTML Document
+    - We create a react root and the application is started by mounting the App component to the root div
+
+  * app.jsx
+    - The mounting phase is started in the component lifecycle.
+    - The contructor within app.jsx is executed which establishes an initial state. The initial state has:
+      a. a property named user with a value of null
+      b. a property isAuthorizing and a value of the boolean true
+      c. a property route with the value of the parseRoute function being called with the argument window.location.hash
+        - This properties' role is to decide which screen to show
+
+        * parse-route.js
+          - The parseRoute function takes in a hashRoute as an arguement and returns an object with the properties "path" and "params"
+          - Within the parseRoute function, it checks if the hashRoute starts with a "#" and chops it off
+          - The hashRoute is then split on the "?" and the left side of the question mark is named path, and the right side is named queryString
+          - path is used to determine which screen to show
+          - URLSearchParams object is used to separate the key value pairs from the queryString
+
+    - the render() method is run once and since this.state.isAuthorizing is equal to true, null is returned
+    - After render, the componentDidMount runs and we add an event listener for future hash changes
+      a. if the hash of the URL bar changes, the component will be notified and re-parse the new hash and update the state (which will trigger a re-render)
+    - After the event listener is added, a token is pull from local storage.
+    - The token is checked using a ternary operator and at this point, null will be assigned to the const variable user
+    - setState is called which assigns the property user to the variable user and the property isAuthorizing equal to false.
+    - Since setState has been called, this will trigger a re-render
+    - Within the render method, user and route are destructured this.state and assigned into the variables user and route
+    - Two methods within App (handleSignIn and handleSignOut) are destructured from "this" and assigned to the variables handleSignIn & handleSignOut
+    - User, route, handleSignIn and handleSignOut are then put into an object and assigned to the const variable contextValue which will be used to render the page
+    - The react element AppContext.Provider is run with the prop of value and the value of the variable contextValue
+
+        * app-content.js
+          - The createContext method of the react object is being called and assigned to the const variable AppContext
+          - The AppContext variable is being assigned to the default export of the module
+
+    - The react element Navbar is rendered
+
+        * navbar.jsx
+          - within the render method of the Navbar class, user and handleSignOut are destructured from this.context
+          - render returns a simple navbar with the Awesome App logo and either a button that allows the user to sign out, or two anchor tags for sign-in and sign-out
+          - Since the user is still equal to null, the two anchor tags for sign-in and sign-out are generated
+          - Also, the two anchor tags contain an href of #sign-in or #sign-out which will enable hash routing
+
+    - The react element page-container is rendered
+
+        * page-container.jsx
+          - the function PageContainer is defined and returns divs with some styling that will act as the container for all the content rendered on the page
+
+    - Within the page container, the renderPage method of the App class is called
+    - Within the renderPage method, the property path is destructured from this.state.route and is assign to the const variable path
+    - This path variable will be used to determine which page to render (Home, Auth, or NotFound)
+    - When the page initially loads, path is equal to "sign-in" so the react element Auth will be rendered.
+
+        * auth.jsx
+          - Within the render method of the AuthPage class: user, route, and handleSignIn are destructured from this.context
+          - There is a ternary expression that determines the welcome message being shown to the user depending on the value of route.path
+          - In the return statement, the react element AuthForm is rendered with three props:
+            a. key prop with the value of route.path
+            b. action prop with the value of route.path
+            c. onSignIn prop with the value of handleSignIn
+
+# User can Sign Up
+  * auth-form.jsx
+    - If the user does not yet have an account, they must either click the "Sign Up" anchor on the navbar or the "Register Now" anchor on the form
+    - The user must type in username or password inside the input fields
+    - The react component (which was rendered with an onChange event) triggers the handleChange method on the AuthForm Class
+    - This method automatically updates and sets the state of "username" and "password" which triggers a re-render everytime the user types
+  * Client Submits request
+    - When the user is finished inputing their username and password and proceeds to click the "Register" button, the onSubmit event from the react component get triggered
+    - preventDefault() method is run to prevent the default action which is to reload
+    - Within the handleSubmit method, the action property is destructured from this.props
+    - The action variable is currently equal to "sign-up"
+    - A req object is made that includes the method, headers, and the JSON stringified body
+    - The fetch function is called and a POST request is made to the server on the route '/api/auth/sign-up'
+    - --> See lines 5-9 <--
+    - The user is then taken back to the "sign-in" page by making the window.location.hash equal to "sign-in"
+
+# User can Sign In
+  * auth-form.jsx
+    - Now that the user has made an account, they can log in with their username and password
+    - The user must type in their username and password inside the input fields
+    - The react component (which was rendered with an onChange event) triggers the handleChange method on the AuthForm Class
+    - This method automatically updates and sets the state of "username" and "password" which triggers a re-render everytime the user types
+  * Client Submits request
+    - When the user is finished inputing their username and password and proceeds to click the "Log In" button, the onSubmit event from the react component gets triggered
+    - preventDefault() method is run to prevent the default action which is to reload
+    - Within the handleSubmit method, the action property is destructured from this.props
+    - The action variable is now equal to "sign-in"
+    - A req object is made that includes the method, headers, and the JSON stringified body
+    - The fetch function is called and a POST request is made to the server on the route '/api/auth/sign-in'
+    - --> See lines 10-16 <--
+    - user and token are checked if they are truthy, and if they are, the result is passed into the onSignIn props (which calls the handleSignIn method on app.js)
+    - onSignIn prop was passed into auth-form.jsx when it was rendered in auth.jsx
+  * app.jsx
+    - The handleSignIn method now recieves the result containing the token and user payload as an arguement
+    - user and token properties are destructured from the result object and assigned to the const variable user and token
+    - The token is then saved by the browser in local storage
+    - the state of the App component is updated using setState and assigns the property user to the variable user that was destructured from the result
+    - setState triggers a re-render and when the renderPage method is called, path is now set to ''
+    - This will render the home page that contains the Rick Roll giphy
+
+      * home.jsx
+        - Within the class Home, the render method returns a div with some styling that includes the gif that the user will see once they sign in
+        - Before that, the react element Redirect is returned If the user is falsey (will will take the user back to the sign-in screen)
+
+# User can Sign Out
+  * navbar.jsx
+    - Now that user is NOT equal to null, the navbar will generate a "Sign out" button instead of the achors tags
+    - The sign out button has an onClick event that will trigger the handleSignOut method found in app.js (this method was recieved using context)
+    - Once the user clicks the "Sign out" button, the handleSignOut method is triggered
+  * app.jsx
+    - In the handleSignOut method, the token is removed from local storage and App's state is updated and the prop user is set to null (which will trigger a re-render)
+    - --> See lines 57-79 <--
+    - We now go into the renderPage method method of the App component
+    - path is destructured from the this.state.route to help determine which page to show
+    - Currently, path is still equal to '' so the React element Home is rendered
+
+      * home.jsx
+        - Inside the render method of the Home component, there is an if statement that checks if the value of user (this was provided using Context) is falsey
+        - In this case, that value is falsey and the React element Redirect is returned with a prop of 'to' and a value of 'sign-in'
+
+      * redirect.jsx
+        - In the redirect.jsx file, there is a function being defined and exported
+        - The function takes in a prop are its paramenter and checks if the value of props.to is steictly equal to ''
+        - If it is not equal to an empty string (in this case, it is equal to 'sign-in'), it sets the hash property of the url object equal to props.to (which is 'sign-in')
+        - The hash is then replaced with the value of url.hash
+        - Since the value of window.location.hash has changed, this triggers the event listener added on app.jsx
+        - The call back function sets the state of route equal to the updated window.location.hash, which will then trigger a re-render
+
+    - --> See lines 57-79 <--
+    - We are now back into the renderPage method of the App component
+    - path is destructured from the this.state.route to help determine which page to show
+    - An if statement checks the value of path to determine which page to show
+    - In this case, path is now equal to 'sign-in' and the React element Auth is rendered
+
+      * auth.jsx
+        - --> See lines 83-90 <--
+        - Currently, route.path is equal to 'sign-in' so the welcome message will display 'Please sign in to continue'
