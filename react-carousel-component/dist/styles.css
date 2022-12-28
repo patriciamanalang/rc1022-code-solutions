@@ -1,0 +1,61 @@
+.container {
+  border: solid 2px black;
+  margin: auto;
+  width: 30rem;
+  height: 30rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-third {
+  flex-basis: calc(100% / 3);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.display-arrow-left {
+  color: green;
+  display: flex;
+  align-items: center;
+}
+
+.display-arrow-right {
+  color: green;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  margin: 0 3rem;
+  font-size: 2.5rem;
+}
+
+.progress-circles {
+  padding: 1rem;
+}
+
+.fa-circle {
+  color: green;
+  margin-right: 0.5rem;
+}
+
+img {
+  object-fit: contain;
+  margin-top: 0.5rem;
+  width: 250px;
+  height: 350px;
+}
+
+.hidden {
+  display: none;
+}
