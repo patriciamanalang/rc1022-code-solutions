@@ -15,7 +15,7 @@ function uniqueLinear(words) {
     }
   }
   return unique;                    // 1 * 1 = O(1)
-} // Big O Notation for uniqueLinear: O(?)
+} // Big O Notation for uniqueLinear: O(n)
 
 function uniqueQuadratic(words) {
   const unique = [];                // 1 * 1 = O(1)
